@@ -1,0 +1,12 @@
+
+<ul *ngFor="let data of _data; let num = index">
+    <li>{{data}}:{{num}}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let change of changeLog">{{change}}</li>
+</ul>
+
+<button (click)="putToPatent()">outPut</button>
+
+<div>{{birthDate | date:"MM/dd/yyyy"}}</div>

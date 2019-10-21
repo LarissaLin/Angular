@@ -1,0 +1,41 @@
+
+
+<!-- <app-home></app-home> -->
+
+<!--
+  <div>
+    <button (click)="newMinor()">New minor version</button>
+    <button (click)="newMajor()">New major version</button>
+  </div>
+
+  <app-child #child [childData]='parentData' [major]='major' [minor]='minor' [runNewMinor]='newMinor' [home]='this' (message) = 'messageFromChild($event)'></app-child>
+
+  <div>{{message}}</div>
+
+  <input [(ngModel)]="value" type="text"/>
+
+  <p>{{value}}</p>
+
+  <div *ngIf='showFlag' class="name" style="display: none">ng if</div>
+
+  <div>试试我自己写的管道{{3 | multiple : 2}}</div>
+
+  <button [style.color] = "isSpecial?'red':'green'"></button>
+  <div [class.special]='isSpecial'></div> -->
+<div class="container">
+  <a [routerLink]="['/home']">主页</a>
+  <a [routerLink]="['/order',1]" >订单信息</a>
+  <!-- <a [routerLink]="['/order']" [queryParams]="{id:3,name:'订单3'}">订单信息</a> -->
+  <input type="button" value="订单信息2" (click)="toOrder()">
+  <a [routerLink]="[{outlets: {primary: 'home',aux: 'customer'}}]">开始咨询</a>
+  <a [routerLink]="[{outlets: {aux: null}}]" >结束咨询</a>
+</div>
+<router-outlet></router-outlet>
+<router-outlet name="aux"></router-outlet>
+
+<app-product></app-product>
+<app-product2></app-product2>
+
+
+
+

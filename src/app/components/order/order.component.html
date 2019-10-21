@@ -1,0 +1,22 @@
+<div class="order">
+  <p>order works!</p>
+
+  <div>订单名称:{{orderName}}</div>
+
+  <div>订单号:{{orderId}}</div>
+  <div>是否在生产环境: {{isPro?'Yes':'No'}}</div>
+
+  <div>
+    <input type="button" (click)="focus = true" value="关注卖家"/>
+  </div>
+
+  <br/>
+  <div>商品名称是: {{goods.name}}</div>
+  <br/>
+
+  <a [routerLink]="['./']">买家信息</a>
+  <a [routerLink]="['./seller',100]">卖家信息</a>
+  <router-outlet></router-outlet>
+</div>
+
+
